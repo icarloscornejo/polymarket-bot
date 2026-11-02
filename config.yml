@@ -1,0 +1,28 @@
+strategy_defaults:
+  entry_window_min_sec: 5
+  entry_window_max_sec: 25
+  min_dtt: 10.0
+  min_gain_usd: 0.75
+  position_size_usd: 10.0
+  snapshot_interval_ms: 1000
+  logging_window_buffer_sec: 10
+
+runtime:
+  mode: PAPER                              # ALWAYS starts in PAPER (D13)
+  btc_feed_primary: binance
+  btc_feed_fallback: coinbase
+  btc_feed_failover_threshold_sec: 3
+  market_discovery_websocket: true
+  market_discovery_rest_interval_sec: 30
+  timezone_default: America/El_Salvador
+
+cleanup:
+  snapshots_retention_days: 7
+  daily_run_hour_local: 3                  # 03:00 local TZ
+
+storage:
+  sqlite_path: data/polybot.db
+
+logging:
+  level: INFO
+  json: true

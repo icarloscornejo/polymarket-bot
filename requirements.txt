@@ -1,0 +1,13 @@
+py-clob-client
+fastapi
+uvicorn[standard]
+sqlalchemy
+python-dotenv
+pyyaml
+httpx
+websockets
+pydantic
+pydantic-settings
+python-dateutil
+pytz
+structlog
